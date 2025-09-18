@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+local.properties
+.gradle*
+
+# Android Studio
+.idea/
+.DS_Store
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing
+**/keystore.jks
+**/*.keystore
+**/*.jks
+
+# Generated
+app/build/
+**/build/
+
+# Kotlin
+*.kotlin_module
+
+# Jetifier
+.jetifier/
+
+# Misc
+*.log
+.cache/
+
+# OS
+Thumbs.db
+.BIN/

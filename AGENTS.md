@@ -1,31 +1,15 @@
-# AGENTS.md — инструкция для Codex
+# Agent Handbook
 
-## Проект
-Warranty — приложение для хранения и отслеживания гарантийных обязательств по товарам.
+## Build
+- ./gradlew assembleDebug
 
-## Установка
-- Установить зависимости: `pip install -r requirements.txt`
+## Test
+- ./gradlew testDebugUnitTest
 
-## Тесты
-- Запуск тестов:  
-  ```bash
-  pytest -q
-Стиль и качество кода
-Линтер:
+## Lint & Static Checks
+- ./gradlew ktlintCheck
+- ./gradlew ci (runs ktlint, unit tests, and assembleDebug)
 
-bash
-Копировать код
-ruff .
-Проверка типов:
-
-bash
-Копировать код
-mypy .
-Цели для Codex
-Добавлять и поддерживать тесты.
-
-Исправлять ошибки и падения тестов.
-
-Поддерживать чистый код в соответствии с линтером.
-
-Создавать PR с понятным описанием изменений.
+## Notes
+- WorkManager reminders require the app to be installed; use db shell cmd jobscheduler run -f com.warranty.app 0 to trigger manually if needed.
+- Import/export operations rely on the system document picker; during automated tests provide mock URIs.

@@ -1,0 +1,8 @@
+{
+  "policies": {
+    "powershell.exe": "always",
+    "git": "always",
+    "gradlew.bat": "always",
+    "gradlew": "always"
+  }
+}
